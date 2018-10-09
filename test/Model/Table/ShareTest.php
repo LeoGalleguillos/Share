@@ -46,4 +46,27 @@ class ShareTest extends TableTestCase
             $this->shareTable
         );
     }
+
+    public function testInsertFaceboookOnDuplicateKeyUpdate()
+    {
+        $shareId = $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
+            null,
+            1,
+            1
+        );
+        $this->assertSame(
+            1,
+            $shareId
+        );
+
+        $shareId = $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
+            null,
+            1,
+            1
+        );
+        $this->assertSame(
+            1,
+            $shareId
+        );
+    }
 }
