@@ -30,7 +30,7 @@ class Module
                 },
                 ShareTable\Share::class => function ($serviceManager) {
                     return new ShareTable\Share(
-                        $serviceManager->get('main')
+                        $serviceManager->get('share')
                     );
                 },
             ],
