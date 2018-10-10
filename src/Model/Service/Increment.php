@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\Share\Model\Service;
 
+use LeoGalleguillos\Entity\Model\Entity as EntityEntity;
 use LeoGalleguillos\Share\Model\Entity as ShareEntity;
 use LeoGalleguillos\Share\Model\Table as ShareTable;
 
