@@ -49,24 +49,28 @@ class ShareTest extends TableTestCase
 
     public function testInsertFaceboookOnDuplicateKeyUpdate()
     {
-        $shareId = $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
+        $affectedRows = $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
             null,
             1,
             1
         );
         $this->assertSame(
             1,
-            $shareId
+            $affectedRows
         );
 
-        $shareId = $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
+        /*
+         * Per MySQL documentation, the affected-rows value is 2
+         * if an existing row is updated.
+         */
+        $affectedRows = $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
             null,
             1,
             1
         );
         $this->assertSame(
-            1,
-            $shareId
+            2,
+            $affectedRows
         );
     }
 }

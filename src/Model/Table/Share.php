@@ -48,7 +48,7 @@ class Share
         return (int) $this->adapter
                           ->query($sql)
                           ->execute($parameters)
-                          ->getGeneratedValue();
+                          ->getAffectedRows();
     }
 
     /**
@@ -82,6 +82,6 @@ class Share
         return (int) $this->adapter
                           ->query($sql)
                           ->execute($parameters)
-                          ->getGeneratedValue();
+                          ->getAffectedRows();
     }
 }
