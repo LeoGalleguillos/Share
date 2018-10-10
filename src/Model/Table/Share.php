@@ -37,7 +37,41 @@ class Share
                 ON
          DUPLICATE
                KEY
-            UPDATE `facebook` =  `facebook` + 1
+            UPDATE `facebook` = `facebook` + 1
+                 ;
+        ';
+        $parameters = [
+            $entityId,
+            $entityTypeId,
+            $typeId,
+        ];
+        return (int) $this->adapter
+                          ->query($sql)
+                          ->execute($parameters)
+                          ->getGeneratedValue();
+    }
+
+    /**
+     * @return int
+     */
+    public function insertTwitterOnDuplicateKeyUpdate(
+        int $entityId = null,
+        int $entityTypeId,
+        int $typeId
+    ): int {
+        $sql = '
+            INSERT
+              INTO `share` (
+                       `entity_id`
+                     , `entity_type_id`
+                     , `type_id`
+                     , `twitter`
+                   )
+            VALUES (?, ?, ?, 1)
+                ON
+         DUPLICATE
+               KEY
+            UPDATE `twitter` = `twitter` + 1
                  ;
         ';
         $parameters = [
