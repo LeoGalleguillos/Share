@@ -23,6 +23,11 @@ class Module
     {
         return [
             'factories' => [
+                ShareService\Increment::class => function ($serviceManager) {
+                    return new ShareService\Increment(
+                        $serviceManager->get(ShareTable\Share::class)
+                    );
+                },
                 ShareTable\Share::class => function ($serviceManager) {
                     return new ShareTable\Share(
                         $serviceManager->get('main')

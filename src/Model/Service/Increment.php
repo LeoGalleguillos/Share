@@ -17,13 +17,13 @@ class Increment
         int $typeId,
         ShareEntity\Type $shareTypeEntity
     ) {
-        if ($shareTypeEntitya instanceof ShareEntity\Type\Facebook::class) {
+        if ($shareTypeEntitya instanceof ShareEntity\Type\Facebook) {
             return $this->shareTable->insertFaceboookOnDuplicateKeyUpdate(
                 null,
                 $entityTypeEntity->getEntityTypeId(),
                 $typeId
             );
-        } elseif ($shareTypeEntitya instanceof ShareEntity\Type\Twitter::class) {
+        } elseif ($shareTypeEntitya instanceof ShareEntity\Type\Twitter) {
             return $this->shareTable->insertTwitterOnDuplicateKeyUpdate(
                 null,
                 $entityTypeEntity->getEntityTypeId(),
