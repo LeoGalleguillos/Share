@@ -84,4 +84,24 @@ class Share
                           ->execute($parameters)
                           ->getAffectedRows();
     }
+
+    public function selectWhereEntityTypeIdAndTypeId(
+        int $entityTypeId,
+        int $typeId
+    ): array {
+        $sql = '
+            SELECT `share`.`entity_type_id`
+                 , `share`.`type_id`
+                 , `share`.`facebook`
+                 , `share`.`twitter`
+              FROM `share`
+             WHERE `share`.`entity_type_id` = ?
+               AND `share`.`type_id` = ?
+        ';
+        $parameters = [
+            $entityTypeId,
+            $typeId,
+        ];
+        return $this->adapter->query($sql)->execute($parameters)->current();
+    }
 }
