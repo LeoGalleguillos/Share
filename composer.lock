@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cbd324d0334ad92e90099730f046a04",
+    "content-hash": "9ad145ee6df782398db91cc692424636",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1266,22 +1266,22 @@
         },
         {
             "name": "leo-galleguillos/entity",
-            "version": "dev-master",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Entity.git",
-                "reference": "9c2a54289f947e180677a59db56385b646d8bcac"
+                "reference": "59d0ecbcc8e22d9478050cb40f38f815dd87bc02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Entity/zipball/9c2a54289f947e180677a59db56385b646d8bcac",
-                "reference": "9c2a54289f947e180677a59db56385b646d8bcac",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Entity/zipball/59d0ecbcc8e22d9478050cb40f38f815dd87bc02",
+                "reference": "59d0ecbcc8e22d9478050cb40f38f815dd87bc02",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-db": "^2.9",
                 "laminas/laminas-test": "^3.1",
-                "leo-galleguillos/test": "dev-master"
+                "leo-galleguillos/test": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -1294,20 +1294,20 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-25T09:27:06+00:00"
+            "time": "2020-01-26T08:08:07+00:00"
         },
         {
             "name": "leo-galleguillos/test",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Test.git",
-                "reference": "4bc9e130a1c03b72f93329e75ff4bf519f03a4c4"
+                "reference": "34e71d6fd5e13c7bfae0632a9599ae0534ce0b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/4bc9e130a1c03b72f93329e75ff4bf519f03a4c4",
-                "reference": "4bc9e130a1c03b72f93329e75ff4bf519f03a4c4",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/34e71d6fd5e13c7bfae0632a9599ae0534ce0b94",
+                "reference": "34e71d6fd5e13c7bfae0632a9599ae0534ce0b94",
                 "shasum": ""
             },
             "require": {
@@ -1325,7 +1325,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-13T07:41:45+00:00"
+            "time": "2020-01-26T07:24:54+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2839,10 +2839,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "leo-galleguillos/entity": 20,
-        "leo-galleguillos/test": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
