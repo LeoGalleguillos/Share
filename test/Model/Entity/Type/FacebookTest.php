@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class FacebookTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->facebookEntity = new ShareEntity\Type\Facebook();
     }
